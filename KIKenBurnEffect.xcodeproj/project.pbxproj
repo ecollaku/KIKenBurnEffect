@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		589D91212145B61300A1E0C1 /* KIKenBurnEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		589D91282145B65400A1E0C1 /* KenBurnEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589D91272145B65400A1E0C1 /* KenBurnEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		589D911C2145B61300A1E0C1 /* KIKenBurnEffect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KIKenBurnEffect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIKenBurnEffect.h; sourceTree = "<group>"; };
 		589D91202145B61300A1E0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589D91272145B65400A1E0C1 /* KenBurnEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenBurnEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */,
 				589D91202145B61300A1E0C1 /* Info.plist */,
+				589D91272145B65400A1E0C1 /* KenBurnEffect.swift */,
 			);
 			path = KIKenBurnEffect;
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					589D911B2145B61300A1E0C1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589D91282145B65400A1E0C1 /* KenBurnEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +264,7 @@
 		589D91252145B61300A1E0C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kilabs.KIKenBurnEffect;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		589D91262145B61300A1E0C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
