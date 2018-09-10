@@ -11,18 +11,57 @@ import UIKit
 @IBDesignable public final class KenBurnEffect: UIImageView {
     
     public var isAnimationStarted = true
-    public var timeDuration: TimeInterval = 15
     
-    public func startAnimation(imagesArray: [String]) {
+    @IBInspectable var cornerRadius: Double {
+        get {
+            return Double(self.layer.cornerRadius)
+        }set {
+            self.layer.cornerRadius = CGFloat(newValue)
+        }
+    }
+    @IBInspectable var borderWidth: Double {
+        get {
+            return Double(self.layer.borderWidth)
+        }
+        set {
+            self.layer.borderWidth = CGFloat(newValue)
+        }
+    }
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: self.layer.borderColor!)
+        }
+        set {
+            self.layer.borderColor = newValue?.cgColor
+        }
+    }
+    @IBInspectable var shadowColor: UIColor? {
+        get {
+            return UIColor(cgColor: self.layer.shadowColor!)
+        }
+        set {
+            self.layer.shadowColor = newValue?.cgColor
+        }
+    }
+    @IBInspectable var shadowOpacity: Float {
+        get {
+            return self.layer.shadowOpacity
+        }
+        set {
+            self.layer.shadowOpacity = newValue
+        }
+    }
+    
+    public func startAnimation(imagesArray: [String], timeDuration: TimeInterval) {
         self.isAnimationStarted = true
-        self.animate(imagesArray: imagesArray)
+        self.animate(timeDuration: timeDuration, imagesArray: imagesArray)
     }
     
     public func stopAnimation() {
         self.isAnimationStarted = false
     }
     
-    private func animate(for imageIndex: Int = 0, imagesArray: [String]) {
+    private func animate(for imageIndex: Int = 0, timeDuration: TimeInterval, imagesArray: [String]) {
         var currentImageIndex = imageIndex
         guard let image = UIImage(named: imagesArray[imageIndex % imagesArray.count]), self.isAnimationStarted else {
             self.layer.removeAllAnimations()
@@ -35,7 +74,7 @@ import UIKit
                     self?.scaleTransformImageView()
                     }, completion: { [weak self] _ in
                         currentImageIndex += 1
-                        self?.animate(for: currentImageIndex, imagesArray: imagesArray)
+                        self?.animate(for: currentImageIndex, timeDuration: timeDuration, imagesArray: imagesArray)
                 })
         })
     }
