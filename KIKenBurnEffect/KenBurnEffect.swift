@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable public final class KenBurnEffect: UIImageView {
+public final class KenBurnEffect: UIImageView {
     
     public var isAnimationStarted = true
     
