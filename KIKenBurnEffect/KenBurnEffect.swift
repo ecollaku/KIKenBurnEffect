@@ -23,7 +23,12 @@ public final class KenBurnEffect: UIImageView {
     
     private func animate(for imageIndex: Int = 0, timeDuration: TimeInterval, imagesArray: [String]) {
         var currentImageIndex = imageIndex
-        guard let image = UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first, self.isAnimationStarted else {
+        var animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])
+        if UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first != nil {
+            animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first
+        }
+        
+        guard let image = animatedImage, self.isAnimationStarted else {
             self.layer.removeAllAnimations()
             return
         }
