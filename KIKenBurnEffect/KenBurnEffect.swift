@@ -43,14 +43,6 @@ import UIKit
             self.layer.shadowColor = newValue?.cgColor
         }
     }
-    @IBInspectable var shadowOpacity: Float {
-        get {
-            return self.layer.shadowOpacity
-        }
-        set {
-            self.layer.shadowOpacity = newValue
-        }
-    }
     
     public func startAnimation(imagesArray: [String], timeDuration: TimeInterval) {
         self.isAnimationStarted = true
@@ -70,7 +62,7 @@ import UIKit
         UIView.animate(withDuration: timeDuration, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.fadeOutImageView(for: image)
             }, completion: { _ in
-                UIView.animate(withDuration: 15, animations: { [weak self] in
+                UIView.animate(withDuration: timeDuration, animations: { [weak self] in
                     self?.scaleTransformImageView()
                     }, completion: { [weak self] _ in
                         currentImageIndex += 1
