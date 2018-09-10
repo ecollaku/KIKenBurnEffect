@@ -87,7 +87,7 @@ extension UIImage{
                 let breadthSize = CGSize(width: breadth, height: breadth)
                 UIGraphicsBeginImageContextWithOptions(breadthSize, false, scale)
                 defer { UIGraphicsEndImageContext() }
-                guard let cgImage = face.cgImage?.cropping(to: CGRect(origin: CGPoint(x: size.width > size.height ? (size.width-size.height).rounded(.down) : 0, y: size.height > size.width ? (size.height-size.width).rounded(.down) : 0), size: breadthSize))
+                guard let cgImage = face.cgImage
                     else { return nil }
                 let faceRect = CGRect(origin: .zero, size: CGSize(width: min(size.width, size.height), height: min(size.width, size.height)))
                 UIBezierPath(ovalIn: faceRect).addClip()
