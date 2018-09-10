@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		589D91212145B61300A1E0C1 /* KIKenBurnEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		589D91282145B65400A1E0C1 /* KenBurnEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589D91272145B65400A1E0C1 /* KenBurnEffect.swift */; };
+		58C2317621471E7F00FA9F6E /* UIImage+FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2317521471E7F00FA9F6E /* UIImage+FaceRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIKenBurnEffect.h; sourceTree = "<group>"; };
 		589D91202145B61300A1E0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589D91272145B65400A1E0C1 /* KenBurnEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenBurnEffect.swift; sourceTree = "<group>"; };
+		58C2317521471E7F00FA9F6E /* UIImage+FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+FaceRecognition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */,
 				589D91202145B61300A1E0C1 /* Info.plist */,
 				589D91272145B65400A1E0C1 /* KenBurnEffect.swift */,
+				58C2317521471E7F00FA9F6E /* UIImage+FaceRecognition.swift */,
 			);
 			path = KIKenBurnEffect;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C2317621471E7F00FA9F6E /* UIImage+FaceRecognition.swift in Sources */,
 				589D91282145B65400A1E0C1 /* KenBurnEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
