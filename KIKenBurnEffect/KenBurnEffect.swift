@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import QuartzCore
 
-public final class KenBurnEffect: UIImageView {
+@IBDesignable public final class KenBurnEffect: UIImageView {
     
     public var isAnimationStarted = true
+    public var timeDuration: TimeInterval = 15
     
     public func startAnimation(imagesArray: [String]) {
         self.isAnimationStarted = true
@@ -28,7 +28,7 @@ public final class KenBurnEffect: UIImageView {
             self.layer.removeAllAnimations()
             return
         }
-        UIView.animate(withDuration: 0, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+        UIView.animate(withDuration: timeDuration, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.fadeOutImageView(for: image)
             }, completion: { _ in
                 UIView.animate(withDuration: 15, animations: { [weak self] in

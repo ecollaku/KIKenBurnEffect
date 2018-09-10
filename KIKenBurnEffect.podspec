@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
           s.source              = { :git => "https://github.com/ecollaku/KIKenBurnEffect.git", :tag => s.version }
           
           s.source_files     = "KIKenBurnEffect", "KIKenBurnEffect/**/*.{h,m,swift}"
+          s.swift_version = "4.2"
     end
 
 
