@@ -27,7 +27,7 @@ public final class KenBurnEffect: UIImageView {
             self.layer.removeAllAnimations()
             return
         }
-        UIView.animate(withDuration: timeDuration, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+        UIView.animate(withDuration: 0, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.fadeOutImageView(for: image)
             }, completion: { _ in
                 UIView.animate(withDuration: timeDuration, animations: { [weak self] in
