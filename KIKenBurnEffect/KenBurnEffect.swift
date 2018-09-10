@@ -26,6 +26,7 @@ public final class KenBurnEffect: UIImageView {
         var animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])
         if UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first != nil {
             animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first
+            // detectAndZoomToFace()
         }
         
         guard let image = animatedImage, self.isAnimationStarted else {
@@ -85,19 +86,23 @@ extension UIImage{
                 UIGraphicsBeginImageContextWithOptions(rect.size, false, scale)
                 defer { UIGraphicsEndImageContext() }
                 UIImage(ciImage: ciimage.cropped(to: rect)).draw(in: CGRect(origin: .zero, size: rect.size))
-                guard let face = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-                // now that you have your face image you need to properly apply a circle mask to it
+                guard let face = UIGraphicsGetImageFromCurrentImageContext() else {
+                    return nil
+                }
                 let size = face.size
                 let breadth = min(size.width, size.height)
                 let breadthSize = CGSize(width: breadth, height: breadth)
                 UIGraphicsBeginImageContextWithOptions(breadthSize, false, scale)
                 defer { UIGraphicsEndImageContext() }
                 guard let cgImage = face.cgImage?.cropping(to: CGRect(origin: CGPoint(x: size.width > size.height ? (size.width-size.height).rounded(.down)/2 : 0, y: size.height > size.width ? (size.height-size.width).rounded(.down)/2 : 0), size: breadthSize))
-                    else { return nil }
+                    
+                    else {
+                        return nil
+                }
                 let faceRect = CGRect(origin: .zero, size: CGSize(width: min(size.width, size.height), height: min(size.width, size.height)))
-                UIBezierPath(ovalIn: faceRect).addClip()
                 UIImage(cgImage: cgImage).draw(in: faceRect)
                 return UIGraphicsGetImageFromCurrentImageContext()
             } ?? []
     }
 }
+
