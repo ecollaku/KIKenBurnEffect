@@ -7,12 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582EDA162149430300E1FA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDA152149430300E1FA9F /* AppDelegate.swift */; };
+		582EDA182149430300E1FA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDA172149430300E1FA9F /* ViewController.swift */; };
+		582EDA1B2149430300E1FA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582EDA192149430300E1FA9F /* Main.storyboard */; };
+		582EDA1D2149430300E1FA9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582EDA1C2149430300E1FA9F /* Assets.xcassets */; };
+		582EDA202149430300E1FA9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582EDA1E2149430300E1FA9F /* LaunchScreen.storyboard */; };
+		582EDA282149444000E1FA9F /* KIKenBurnEffect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EDA262149443300E1FA9F /* KIKenBurnEffect.framework */; };
+		582EDA292149444000E1FA9F /* KIKenBurnEffect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 582EDA262149443300E1FA9F /* KIKenBurnEffect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		589D91212145B61300A1E0C1 /* KIKenBurnEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		589D91282145B65400A1E0C1 /* KenBurnEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589D91272145B65400A1E0C1 /* KenBurnEffect.swift */; };
 		58C2317621471E7F00FA9F6E /* UIImage+FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2317521471E7F00FA9F6E /* UIImage+FaceRecognition.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		582EDA2A2149444000E1FA9F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				582EDA292149444000E1FA9F /* KIKenBurnEffect.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		582EDA132149430300E1FA9F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582EDA152149430300E1FA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		582EDA172149430300E1FA9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		582EDA1A2149430300E1FA9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		582EDA1C2149430300E1FA9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582EDA1F2149430300E1FA9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		582EDA212149430300E1FA9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582EDA262149443300E1FA9F /* KIKenBurnEffect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KIKenBurnEffect.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/KIKenBurnEffect-eozwinbbivioxcfapkrprcotuegg/Build/Products/Debug-iphoneos/KIKenBurnEffect.framework"; sourceTree = "<group>"; };
 		589D911C2145B61300A1E0C1 /* KIKenBurnEffect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KIKenBurnEffect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		589D911F2145B61300A1E0C1 /* KIKenBurnEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIKenBurnEffect.h; sourceTree = "<group>"; };
 		589D91202145B61300A1E0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -21,6 +50,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		582EDA102149430300E1FA9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582EDA282149444000E1FA9F /* KIKenBurnEffect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589D91182145B61300A1E0C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -31,10 +68,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		582EDA142149430300E1FA9F /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				582EDA25214943B100E1FA9F /* Frameworks */,
+				582EDA152149430300E1FA9F /* AppDelegate.swift */,
+				582EDA172149430300E1FA9F /* ViewController.swift */,
+				582EDA192149430300E1FA9F /* Main.storyboard */,
+				582EDA1C2149430300E1FA9F /* Assets.xcassets */,
+				582EDA1E2149430300E1FA9F /* LaunchScreen.storyboard */,
+				582EDA212149430300E1FA9F /* Info.plist */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		582EDA25214943B100E1FA9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				582EDA262149443300E1FA9F /* KIKenBurnEffect.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		589D91122145B61300A1E0C1 = {
 			isa = PBXGroup;
 			children = (
 				589D911E2145B61300A1E0C1 /* KIKenBurnEffect */,
+				582EDA142149430300E1FA9F /* DemoApp */,
 				589D911D2145B61300A1E0C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				589D911C2145B61300A1E0C1 /* KIKenBurnEffect.framework */,
+				582EDA132149430300E1FA9F /* DemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +133,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		582EDA122149430300E1FA9F /* DemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582EDA242149430300E1FA9F /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildPhases = (
+				582EDA0F2149430300E1FA9F /* Sources */,
+				582EDA102149430300E1FA9F /* Frameworks */,
+				582EDA112149430300E1FA9F /* Resources */,
+				582EDA2A2149444000E1FA9F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoApp;
+			productName = DemoApp;
+			productReference = 582EDA132149430300E1FA9F /* DemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		589D911B2145B61300A1E0C1 /* KIKenBurnEffect */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 589D91242145B61300A1E0C1 /* Build configuration list for PBXNativeTarget "KIKenBurnEffect" */;
@@ -96,9 +175,13 @@
 		589D91132145B61300A1E0C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Ergesa Collaku";
 				TargetAttributes = {
+					582EDA122149430300E1FA9F = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					589D911B2145B61300A1E0C1 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
@@ -111,6 +194,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 589D91122145B61300A1E0C1;
 			productRefGroup = 589D911D2145B61300A1E0C1 /* Products */;
@@ -118,11 +202,22 @@
 			projectRoot = "";
 			targets = (
 				589D911B2145B61300A1E0C1 /* KIKenBurnEffect */,
+				582EDA122149430300E1FA9F /* DemoApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		582EDA112149430300E1FA9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582EDA202149430300E1FA9F /* LaunchScreen.storyboard in Resources */,
+				582EDA1D2149430300E1FA9F /* Assets.xcassets in Resources */,
+				582EDA1B2149430300E1FA9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589D911A2145B61300A1E0C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +228,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		582EDA0F2149430300E1FA9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582EDA182149430300E1FA9F /* ViewController.swift in Sources */,
+				582EDA162149430300E1FA9F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589D91172145B61300A1E0C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +248,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		582EDA192149430300E1FA9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582EDA1A2149430300E1FA9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		582EDA1E2149430300E1FA9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582EDA1F2149430300E1FA9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		582EDA222149430300E1FA9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VQM635QN5;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = kilabs.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		582EDA232149430300E1FA9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VQM635QN5;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kilabs.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		589D91222145B61300A1E0C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		582EDA242149430300E1FA9F /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582EDA222149430300E1FA9F /* Debug */,
+				582EDA232149430300E1FA9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		589D91162145B61300A1E0C1 /* Build configuration list for PBXProject "KIKenBurnEffect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
