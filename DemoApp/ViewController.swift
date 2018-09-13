@@ -16,7 +16,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.animatedImageView.startAnimation(imagesArray: imagesNames, timeDuration: 15)
+        let images = [
+            UIImage(named: imagesNames[0])!,
+            UIImage(named: imagesNames[1])!,
+            UIImage(named: imagesNames[2])!,
+            ]
+        self.animatedImageView.startAnimation(imagesArray: images, timeDuration: 15)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

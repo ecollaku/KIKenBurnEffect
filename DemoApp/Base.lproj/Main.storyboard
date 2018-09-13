@@ -18,20 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIr-rI-niW" customClass="KenBurnEffect" customModule="KIKenBurnEffect">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIr-rI-niW" customClass="KenBurnEffect" customModule="KIKenBurnEffect">
                                 <rect key="frame" x="0.0" y="175.5" width="375" height="316"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="316" id="uDQ-1H-CXe"/>
-                                    <constraint firstAttribute="width" constant="375" id="uEl-jz-YrX"/>
+                                    <constraint firstAttribute="width" constant="375" id="3Xr-wy-fDo"/>
+                                    <constraint firstAttribute="height" constant="316" id="WxG-sb-CCE"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cIr-rI-niW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQP-au-1wo"/>
-                            <constraint firstItem="cIr-rI-niW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KhX-Nq-vnr"/>
-                            <constraint firstItem="cIr-rI-niW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eu4-TQ-g8B"/>
-                            <constraint firstItem="cIr-rI-niW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="trK-0f-PMC"/>
+                            <constraint firstItem="cIr-rI-niW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06y-Mo-1Xe"/>
+                            <constraint firstItem="cIr-rI-niW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fp6-bJ-GOl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

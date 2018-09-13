@@ -12,7 +12,7 @@ public final class KenBurnEffect: UIImageView {
     
     public var isAnimationStarted = true
     
-    public func startAnimation(imagesArray: [String], timeDuration: TimeInterval) {
+    public func startAnimation(imagesArray: [UIImage], timeDuration: TimeInterval) {
         self.isAnimationStarted = true
         self.animate(timeDuration: timeDuration, imagesArray: imagesArray)
     }
@@ -21,18 +21,14 @@ public final class KenBurnEffect: UIImageView {
         self.isAnimationStarted = false
     }
     
-    private func animate(for imageIndex: Int = 0, timeDuration: TimeInterval, imagesArray: [String]) {
+    private func animate(for imageIndex: Int = 0, timeDuration: TimeInterval, imagesArray: [UIImage]) {
         var currentImageIndex = imageIndex
-        var animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])
-        if UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first != nil {
-            animatedImage = UIImage(named: imagesArray[imageIndex % imagesArray.count])?.faces.first
-            // detectAndZoomToFace()
-        }
         
-        guard let image = animatedImage, self.isAnimationStarted else {
+        guard self.isAnimationStarted else {
             self.layer.removeAllAnimations()
             return
         }
+        let image = imagesArray[imageIndex % imagesArray.count]
         UIView.animate(withDuration: 0, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.fadeOutImageView(for: image)
             }, completion: { _ in
